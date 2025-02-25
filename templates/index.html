@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product to Code Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 100%; height: 100px; }
+        pre { background: #f4f4f4; padding: 10px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Product to Code Generator</h1>
+    <form method="POST">
+        <label>Enter Product Description:</label><br>
+        <textarea name="description" placeholder="e.g., A shopping cart system with add and remove items"></textarea><br>
+        <button type="submit">Generate Code</button>
+    </form>
+    {% if code %}
+        <h2>Generated Code:</h2>
+        <pre>{{ code }}</pre>
+    {% endif %}
+</body>
+</html>
